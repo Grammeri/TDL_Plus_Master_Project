@@ -47,3 +47,18 @@
 .errorMessage {
     color:red
 }
+
+.warning {
+    border: 3px red solid;
+}
+.warningSign {
+    color:red
+}
+
+.indicator {
+    opacity:30%
+}
+
+.activeFilter {
+    background-color: pink;
+}

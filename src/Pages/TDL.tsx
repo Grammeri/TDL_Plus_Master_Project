@@ -1,17 +1,22 @@
 import React, {ChangeEvent, useState, KeyboardEvent} from 'react';
 import {v1} from "uuid";
 
+type FilterType = "Completed" | "InProgress" | "All"
+
 export const Tdl = () => {
 
-    const [tasks, setTasks]=useState(
+    let [tasks, setTasks]=useState(
         [
             {id:v1(), title:"Book", isDone:false},
-            {id: v1(), title:"Milk", isDone:true}
+            {id: v1(), title:"Milk", isDone:true},
+            {id: v1(), title:"Map", isDone:true},
+            {id: v1(), title:"Pen", isDone:false},
         ]
     )
 
     const [title, setTitle]=useState("")
     const [error, setError]=useState("")
+    const [filter, setFilter]=useState<FilterType>("All")
 
     const addTask = (title:string)=>{
         setTasks([{id:v1(), title:title, isDone:true},...tasks])
@@ -54,8 +59,18 @@ export const Tdl = () => {
        setError("")
         if(e.key==="Enter"){
             onClickHandler()
-
         }
+    }
+
+    let taskForTDL = tasks
+        if (filter === "Completed"){
+            tasks=taskForTDL.filter(f=>f.isDone===true)
+        } if (filter==="InProgress"){
+            tasks=taskForTDL.filter(f=>f.isDone===false)
+        }
+
+    const masterButton = (filterValue:FilterType)=> {
+        setFilter(filterValue)
     }
 
     return (
@@ -67,13 +82,12 @@ export const Tdl = () => {
                 onKeyPress={onKeyPressHandler}
             />
             <button onClick={onClickHandler}>+</button>
-            {error && <div className={"errorMessage"}>{error}</div>}
+            {error ? <div className={"errorMessage"}>{error}</div>:""}
 
             {tasks.map((m)=>{
-
                     return (
-
-                        <li>
+                        <>
+                        <li className={m.isDone ? "indicator" : ""}>
                             <span><input type="checkbox"
                                          checked={m.isDone}
                             onChange={(e:ChangeEvent<HTMLInputElement>)=>checkBoxHandler(m.id, e.currentTarget.checked)}
@@ -81,11 +95,18 @@ export const Tdl = () => {
                             </span>
                             <span>{m.title}</span>
                             <button onClick={()=>removeTaskBtn(m.id)}>X</button>
-
                         </li>
+
+                        </>
                     )
                 }
             )}
+            <div >
+                <button className={filter==="All" ? "activeFilter" : ""} onClick={()=>{masterButton("All")}}>All</button>
+                <button className={filter==="InProgress" ? "activeFilter" : ""} onClick={()=>{masterButton("InProgress")}}>In progress</button>
+                <button className={filter==="Completed" ? "activeFilter" : ""} onClick={()=>{masterButton("Completed")}}>Completed</button>
+            </div>
+
         </div>
     );
 };
