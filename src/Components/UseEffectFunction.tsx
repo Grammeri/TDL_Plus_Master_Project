@@ -19,7 +19,7 @@ export const UseEffectFunction = () => {
     useEffect(()=>{
         console.log("useEffect every render");
         document.title = counter.toString()
-    },[counter]) //dependency }, [counter})
+    },[counter]) //dependency }, [counter}), counter is rendered only when it changes
 
     return (
         <div>

@@ -6,6 +6,8 @@ import {Tdl} from "../Pages/TDL";
 import {DimaImage} from "./DimaImage";
 import {Tdl2} from "./Tdl2";
 import {UseEffectFunction} from "./UseEffectFunction";
+import {Pagination} from "./Pagination";
+
 
 type ContentPropsType = {
 
@@ -21,6 +23,7 @@ export const Content = (props:ContentPropsType) => {
                     <Route path={"/page3"} element={<DimaImage/>}/>
                     <Route path={"/page4"} element={<Tdl2/>}/>
                     <Route path={"/page5"} element={<UseEffectFunction/>}/>
+                    <Route path={"/page6"} element={<Pagination/>}/>
                 </Routes>
             </div>
         </>
