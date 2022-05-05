@@ -9,12 +9,14 @@ import {Grids} from "./pages/Grids";
 import {Position} from "./pages/Position";
 import {Flex} from "./pages/Flex";
 import {TDLforAssociativeArray} from "./pages/TodolistVersions/TDLAssociative";
-import {TDLforReducer} from "./pages/TodolistVersions/TDLforReducer";
-import {TDLforReduxSINGL} from "./pages/TodolistVersions/TDLforReduxSINGL";
-import {TDLforReduxDBL} from "./pages/TodolistVersions/TDLforReduxDBL";
+//import {TDLforReducer} from "./pages/TodolistVersions/TDLforReducer";
+//import {TDLforReduxSINGL} from "./pages/TodolistVersions/TDLforReduxSINGL";
+//import {TDLforReduxDBL} from "./pages/TodolistVersions/TDLforReduxDBL";
 import {Search} from "./Search";
 import {Flights} from "./pages/Flights";
 import {StyledComponents} from "./pages/StyledComponents";
+import {Media} from "./pages/Media";
+import {TDLforReducer} from "./pages/TodolistVersions/TDLforReducer";
 
 
 
@@ -39,7 +41,6 @@ export const Content = (props: ContentPropsType) => {
                         setCargoOfskills={props.setCargoOfskills}
                         changeIsDone={props.changeIsDone}
                     />}/>
-
                     <Route path={'/Counter'} element={<Counter/>}/>
                     <Route path={'/Flex'} element={<Flex/>}/>
                     <Route path={'/Position'} element={<Position/>}/>
@@ -50,10 +51,12 @@ export const Content = (props: ContentPropsType) => {
                     <Route path={'/Pagination'} element={<Pagination/>}/>
                     <Route path={'/Search'} element={<Search/>}/>
                     <Route path={'/StyledComponents'} element={<StyledComponents/>}/>
+                    <Route path={'/Media'} element={<Media/>}/>
                     <Route path={'/TDLforAssociativeArray'} element={<TDLforAssociativeArray/>}/>
                     <Route path={'/TDLforReducer'} element={<TDLforReducer/>}/>
-                    <Route path={'/TDLforReduxSINGL'} element={<TDLforReduxSINGL/>}/>
-                    <Route path={'/TDLforReduxDBL'} element={<TDLforReduxDBL/>}/>
+                    {/*<Route path={'/TDLforReduxSINGL'} element={<TDLforReduxSINGL/>}/>*/}
+                    {/*<Route path={'/TDLforReduxDBL'} element={<TDLforReduxDBL/>}/>*/}
+
 
                 </Routes>
 
