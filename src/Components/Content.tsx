@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Todo, {InArrayPropsType} from "./Todo";
 import {Counter} from "./pages/Counter";
 import {Route, Routes} from 'react-router-dom';
@@ -17,7 +17,7 @@ import {Flights} from "./pages/Flights";
 import {StyledComponents} from "./pages/StyledComponents";
 import {Media} from "./pages/Media";
 import {TDLforReducer} from "./pages/TodolistVersions/TDLforReducer";
-
+import {TDLforReactMemoUseCallBack} from "./pages/TodolistVersions/TDLforReactMemoUseCallBack";
 
 
 type ContentPropsType = {
@@ -54,6 +54,7 @@ export const Content = (props: ContentPropsType) => {
                     <Route path={'/Media'} element={<Media/>}/>
                     <Route path={'/TDLforAssociativeArray'} element={<TDLforAssociativeArray/>}/>
                     <Route path={'/TDLforReducer'} element={<TDLforReducer/>}/>
+                    <Route path={'/TDLforReactMemoUseCallBack'} element={<TDLforReactMemoUseCallBack/>}/>
                     {/*<Route path={'/TDLforReduxSINGL'} element={<TDLforReduxSINGL/>}/>*/}
                     {/*<Route path={'/TDLforReduxDBL'} element={<TDLforReduxDBL/>}/>*/}
 
