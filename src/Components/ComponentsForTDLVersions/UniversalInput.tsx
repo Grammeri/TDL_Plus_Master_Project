@@ -6,7 +6,9 @@ type FullInputPropsType = {
 
 }
 
-export const UniversalInput = (props: FullInputPropsType) => {
+export const UniversalInput = React.memo((props: FullInputPropsType) => {
+    console.log('UniversalInput')
+
     const[error, setError]=useState(false)
 
     let myRef = useRef<HTMLInputElement>(null)
@@ -38,5 +40,5 @@ export const UniversalInput = (props: FullInputPropsType) => {
             {error && <div className={styles.errorMessage}>Field must be Done!</div> }
         </div>
     );
-};
+});
 
