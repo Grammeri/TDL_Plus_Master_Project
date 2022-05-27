@@ -1,0 +1,34 @@
+.general {
+    width: 1200px;
+     display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-areas: 'n h h'
+                         'n c n2'
+                         'n f n2';
+}
+
+.header{
+    grid-area: h;
+    background-color: yellow;
+}
+
+.nav{
+    grid-area:n;
+    background-color: blue;
+}
+
+.nav2{
+    grid-area: n2;
+    background-color: blue;
+}
+
+.content{
+    grid-area:c;
+    background-color: green;
+}
+
+.footer{
+    grid-area: f;
+    background-color: yellow;
+}

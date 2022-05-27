@@ -1,0 +1,74 @@
+/*.header {*/
+/*    height: 200px;*/
+/*    width: 1230px;*/
+/*    background-color: yellow;*/
+/*    font-size: 30px ;*/
+/*    position: relative; !*I am dad here*!*/
+/*}*/
+
+.header .span {
+    position: absolute; /*I am son here*/
+    top: 45%;
+    left: 45%;
+    background-color: orange;
+}
+
+.body {
+    position: relative;
+    height: 700px;
+    width: 100%;
+    background-color: lightgreen;
+}
+
+.body .container1 {
+    position: absolute;
+    left:5%;
+    top:10%;
+    width:200px;
+    height:200px;
+    background-color: sandybrown;
+    float:left;
+}
+
+.body .container2 {
+    position: absolute;
+    left:30%;
+    top:10%;
+    width:200px;
+    height:200px;
+    background-color: red;
+    float:left;
+}
+
+.body .container2 .innerContainer2 {
+    position: absolute;
+    left: 26%;
+    top: 26%;
+    width:100px;
+    height:100px;
+    background-color: #5a636c;
+}
+
+.body .container3 {
+    position: absolute;
+    right:30%;
+    top:10%;
+    width:200px;
+    height:200px;
+    background-color: sandybrown;
+    float:left;
+}
+
+.body .container4 {
+    position: absolute;
+    right:5%;
+    top:10%;
+    width:200px;
+    height:200px;
+    background-color: red;
+    float:left;
+}
+
+.body .glue {
+    clear: both
+}
