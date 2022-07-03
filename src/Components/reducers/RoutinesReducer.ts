@@ -19,6 +19,7 @@ export const RoutinesReducer = (state: Array<RoutineType>, action: RoutinesReduc
     }
 }
 
+
 type  RoutinesReducerACType = removeRoutineACType | addRoutineACType|ChangeCheckBoxStatusACType
 type removeRoutineACType = ReturnType<typeof removeRoutineAC>
 
