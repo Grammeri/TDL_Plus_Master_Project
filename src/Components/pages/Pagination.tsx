@@ -106,6 +106,7 @@ export const Pagination = () => {
 
     const [page, setPage] = React.useState(0); // нулевая порция (с 1-11)
     const [rowsPerPage, setRowsPerPage] = React.useState(10); // в порции 10 котлет
+
     const handleChangePage = (event: React.MouseEvent<HTMLButtonElement> | null, newPage: number) => {
         setPage(newPage);
     };
